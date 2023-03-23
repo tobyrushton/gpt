@@ -10,13 +10,19 @@ export const Input:FC = () => {
     const { newMessage } = useConversations()
 
     return (
+        <form onSubmit={(e) => {
+            e.preventDefault()
+            newMessage(message)
+            setMessage('')
+        }}
+        >
         <input 
             className={styles.input}
             type="text" 
             value={message} 
             onChange={(e) => setMessage(e.target.value)} 
-            onSubmit={() => newMessage(message)}
             placeholder="Type your message here..."
         />
+        </form>
     )
 }
