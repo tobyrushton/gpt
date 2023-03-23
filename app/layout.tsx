@@ -3,7 +3,7 @@ import ConversationProvider from './ConversationProvider'
 import './globals.css'
 
 export const metadata = {
-  title: 'GPT App',
+  title: 'GPT-3.5',
   description: 'Created by Toby Rushton',
 }
 

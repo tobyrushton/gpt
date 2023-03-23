@@ -11,7 +11,7 @@ const Home = async ():Promise<ReactElement> => {
   return (
     <main className={styles.main} style={inter.style}>
       <h1>
-        GPT App
+        GPT-3.5
       </h1>
       <div className={styles.message_container}>
         <Messages />

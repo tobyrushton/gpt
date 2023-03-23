@@ -39,4 +39,20 @@
   overflow-y: auto;
   flex: 1;
   width: 100%;
+  padding: 1rem 5rem;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: #F7F7F8;
+  border-top: 1px solid #DEDEDF;
+  border-bottom: 1px solid #DEDEDF;
+  margin-top: -1px;
+}
+
+.message_user {
+  text-align: right;
+  background-color: transparent;
 }
