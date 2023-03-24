@@ -14,11 +14,17 @@
     "@types/react-dom": "18.0.11",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
+    "highlight.js": "^11.7.0",
+    "marked": "^4.3.0",
     "next": "13.2.4",
     "openai": "^3.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-highlight": "^0.15.0",
     "server-only": "^0.0.1",
     "typescript": "5.0.2"
+  },
+  "devDependencies": {
+    "@types/marked": "^4.0.8"
   }
 }

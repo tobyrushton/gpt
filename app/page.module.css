@@ -50,6 +50,7 @@
   border-top: 1px solid #DEDEDF;
   border-bottom: 1px solid #DEDEDF;
   margin-top: -1px;
+  white-space: pre-line;
 }
 
 .message_user {
