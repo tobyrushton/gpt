@@ -1,4 +1,3 @@
-import 'server-only'
 import ConversationProvider from './ConversationProvider'
 import './globals.css'
 import "highlight.js/styles/github.css";
