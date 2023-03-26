@@ -1,4 +1,3 @@
-import 'server-only'
 import { ReactElement } from 'react'
 import { Input } from './Input'
 import { Messages } from './Messages'

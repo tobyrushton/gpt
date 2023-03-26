@@ -24,7 +24,19 @@ const ConversationProvider:FC<{ children: React.ReactNode }> = ({ children }) =>
         const tempMessage:Conversation = { role: 'user', content: message }
         const tempConversations = [...conversations, tempMessage]
         setConversations(tempConversations)
-        const response = await fetch(`${getUrl()}/api/gpt?messages=${JSON.stringify(tempConversations)}`)
+        let response: Response
+
+        try{
+            response = await fetch(`${getUrl()}/api/gpt?messages=${JSON.stringify(tempConversations)}`)
+        } catch (_) {
+            response = new Response(JSON.stringify({ 
+                role: 'system', 
+                content: 'The response resulted in an error likely due to timing out.'
+                        + 'Requests are currently limited to a max of 10 seconds due to netlify hosting limits.'
+                        + ' Please try shorten your request.' 
+            }))
+        }
+        
         setConversations([...tempConversations, JSON.parse(await response.text())])
     }
 
