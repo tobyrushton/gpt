@@ -11,14 +11,16 @@ export const Messages: FC = () => {
 
     useEffect(() => {
         hljs.highlightAll()
-    },[])
+    },[conversations])
     
     return (
         <>
             {conversations.map((conversation, i) => (
                 <pre className={`${styles.message} ${conversation.role === 'user' ? styles.message_user: ''}`} key={i}>
                     {containsCodeSnippet(conversation.content) ? splitCodeSnippet(conversation.content).map((text, i) => (
-                        text.isCode ? <div dangerouslySetInnerHTML={{__html: marked(text.text)}} key={i} /> : text.text
+                        text.isCode ? (
+                            <div key={i} dangerouslySetInnerHTML={{__html: marked(text.text)}}/>
+                        ): text.text
                     )) : conversation.content}
                 </pre>
             ))}
